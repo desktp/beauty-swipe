@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { fetchProducts } from './ducks';
+
+function App({ fetchProducts }) {
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +30,8 @@ function App() {
   );
 }
 
-export default App;
+const mapState = ({ loading, products }) => ({ loading, products });
+
+const mapDispatch = { fetchProducts };
+
+export default connect(mapState, mapDispatch)(App);
