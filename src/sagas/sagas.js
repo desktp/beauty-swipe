@@ -1,5 +1,5 @@
 import { types } from '../ducks';
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest, takeEvery } from 'redux-saga/effects'
 
 function* fetchProducts(action) {
   try {
@@ -11,8 +11,13 @@ function* fetchProducts(action) {
   }
 }
 
+function* rateProduct(action) {
+  yield put({ type: types.SAVE_PRODUCT_RATING, payload: action.payload });
+}
+
 function* productsSaga() {
   yield takeLatest(types.FETCH_REQUEST, fetchProducts);
+  yield takeEvery(types.RATE_PRODUCT, rateProduct);
 }
 
 export default productsSaga;

@@ -1,1 +1,1 @@
-export { default, types, fetchProducts } from './ProductDuck';
+export { default, types, fetchProducts, rateProduct } from './ProductDuck';
