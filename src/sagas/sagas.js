@@ -1,9 +1,9 @@
 import { types } from '../ducks';
 import { call, put, takeLatest } from 'redux-saga/effects'
 
-function* fetchProducts() {
+function* fetchProducts(action) {
   try {
-    const response = yield call(fetch, 'https://ycl641scac.execute-api.us-west-2.amazonaws.com/staging/products');
+    const response = yield call(fetch, `https://ycl641scac.execute-api.us-west-2.amazonaws.com/staging/products?page=${action.payload}`);
     const productsJson = yield response.json();
     yield put({ type: types.FETCH_SUCCESS, payload: productsJson });
   } catch (e) {

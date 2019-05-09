@@ -36,4 +36,4 @@ export default function reducer(state = INITIAL_STATE, { type, payload }) {
 }
 
 // Action Creators
-export const fetchProducts = () => ({ type: FETCH_REQUEST });
+export const fetchProducts = (page = 0) => ({ type: FETCH_REQUEST, payload: page });
