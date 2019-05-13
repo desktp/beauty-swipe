@@ -1,1 +1,7 @@
-export { default, types, fetchProducts, rateProduct } from './ProductDuck';
+export {
+  default,
+  types,
+  fetchProducts,
+  rateProduct,
+  setFilter,
+} from './ProductDuck';

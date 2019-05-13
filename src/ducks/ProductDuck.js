@@ -1,9 +1,13 @@
+// Ducks! https://github.com/erikras/ducks-modular-redux
+
 // Actions
 const FETCH_REQUEST = 'FETCH_REQUEST';
 const FETCH_SUCCESS = 'FETCH_SUCCESS';
 const FETCH_FAILURE = 'FETCH_FAILURE';
 const RATE_PRODUCT = 'RATE_PRODUCT';
 const SAVE_PRODUCT_RATING = 'SAVE_PRODUCT_RATING';
+const SET_FILTER = 'SET_FILTER';
+const SET_FILTER_SUCCESS = 'SET_FILTER_SUCCESS';
 
 export const types = { 
   FETCH_REQUEST,
@@ -11,6 +15,8 @@ export const types = {
   FETCH_SUCCESS,
   RATE_PRODUCT,
   SAVE_PRODUCT_RATING,
+  SET_FILTER,
+  SET_FILTER_SUCCESS,
 };
 
 // Reducer
@@ -33,6 +39,15 @@ export default function reducer(state = INITIAL_STATE, { type, payload }) {
         products: [...state.products, ...payload.hits],
         loading: false,
       };
+    case types.SET_FILTER_SUCCESS:
+      return {
+        ...state,
+        page: payload.page,
+        // When setting a new filter, we want to reset
+        // the products we already had
+        products: payload.hits,
+        loading: false,
+      };
     case types.FETCH_FAILURE: 
       return {
         ...state,
@@ -52,6 +67,8 @@ export default function reducer(state = INITIAL_STATE, { type, payload }) {
 }
 
 // Action Creators
-export const fetchProducts = (page = 0) => ({ type: FETCH_REQUEST, payload: page });
+export const fetchProducts = (page = 0, filter = '') => ({ type: FETCH_REQUEST, payload: { page, filter } });
+
+export const setFilter = (filter = '') => ({ type: SET_FILTER, payload: { filter } });
 
 export const rateProduct = (product, action) => ({ type: RATE_PRODUCT, payload: { product, action } });
