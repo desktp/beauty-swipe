@@ -4,7 +4,7 @@ import Spinner from '../Spinner';
 
 import s from './Card.module.css';
 
-const Card = ({ product }) => {
+const Card = ({ product = {} }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
