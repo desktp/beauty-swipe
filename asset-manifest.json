@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/beauty-swipe/static/css/main.6b2dbcd2.chunk.css",
+    "main.js": "/beauty-swipe/static/js/main.95da97ac.chunk.js",
+    "main.js.map": "/beauty-swipe/static/js/main.95da97ac.chunk.js.map",
+    "runtime~main.js": "/beauty-swipe/static/js/runtime~main.8087db5a.js",
+    "runtime~main.js.map": "/beauty-swipe/static/js/runtime~main.8087db5a.js.map",
+    "static/js/2.98b0d086.chunk.js": "/beauty-swipe/static/js/2.98b0d086.chunk.js",
+    "static/js/2.98b0d086.chunk.js.map": "/beauty-swipe/static/js/2.98b0d086.chunk.js.map",
+    "index.html": "/beauty-swipe/index.html",
+    "precache-manifest.45be6706162124d49dab005c63387792.js": "/beauty-swipe/precache-manifest.45be6706162124d49dab005c63387792.js",
+    "service-worker.js": "/beauty-swipe/service-worker.js",
+    "static/css/main.6b2dbcd2.chunk.css.map": "/beauty-swipe/static/css/main.6b2dbcd2.chunk.css.map"
+  }
+}
