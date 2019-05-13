@@ -17,9 +17,11 @@ function App({ fetchProducts, rateProduct, setFilter, products, page, loading })
   const [currentProduct, setCurrentProduct] = useState(0);
   const [currentFilter, setCurrentFilter] = useState('');
 
+  // Passing an empty array to the second arg makes this behave
+  // like componentDidMount
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, []); // eslint-disable-line
 
   const handleNextProduct = action => () => {
     // If we're reaching the end, fetch more products preemptively
