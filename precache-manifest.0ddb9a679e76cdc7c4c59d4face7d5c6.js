@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ffd527b4e84db5de7e6495283689a7ce",
+    "revision": "79a0615754905183624d8d91f0cf701c",
     "url": "/beauty-swipe/index.html"
   },
   {
-    "revision": "52db942a4856c50c50df",
+    "revision": "dda5887f96f6f76296fb",
     "url": "/beauty-swipe/static/css/main.ada7b70d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beauty-swipe/static/js/2.98b0d086.chunk.js"
   },
   {
-    "revision": "52db942a4856c50c50df",
-    "url": "/beauty-swipe/static/js/main.95da97ac.chunk.js"
+    "revision": "dda5887f96f6f76296fb",
+    "url": "/beauty-swipe/static/js/main.027a1b1a.chunk.js"
   },
   {
     "revision": "b3d6500592bf56cc75ff",
