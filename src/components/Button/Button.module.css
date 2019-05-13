@@ -3,7 +3,7 @@
   border-radius: 5px;
   height: 40px;
   padding: 5px;
-  background-image: url(/img/thumbs-up.png);
+  background-image: url('https://desktp.github.io/beauty-swipe/img/thumbs-up.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -13,11 +13,9 @@
 
 .like {
   background-color: #71da78;
-  /* background-image: url('/img/thumbs-up.png'); */
 }
 
 .dislike {
   background-color: #f4c435;
-  /* background-image: url('/img/thumbs-up.png'); */
   transform: rotate(180deg);
 }
