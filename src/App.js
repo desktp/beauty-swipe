@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
+import Spinner from './components/Spinner';
 import Card from './components/Card';
 import Button from './components/Button';
+import FilterBar from './components/FilterBar';
 
-import './App.css';
+import './root.css';
+import s from './App.module.css';
 
 import { fetchProducts, rateProduct, setFilter } from './ducks';
 
-function App({ fetchProducts, rateProduct, setFilter, products, page }) {
+const filterOptions = ['eyeshadow', 'concealer', 'foundation', 'lipstick', 'blush'];
+
+function App({ fetchProducts, rateProduct, setFilter, products, page, loading }) {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [currentFilter, setCurrentFilter] = useState('');
 
@@ -41,25 +46,18 @@ function App({ fetchProducts, rateProduct, setFilter, products, page }) {
       </header>
       <main className={s.contentContainer}>
         {
-          products.length <= 0 ?
-            <p>Loading...</p> :
+          products.length <= 0 || loading ?
+            <Spinner /> :
             <>
-              <div>
-                <input type="checkbox" name="eyeshadow" value="eyeshadow" checked={currentFilter === 'eyeshadow'} onChange={handleFilterSelection('eyeshadow')} />
-                <label htmlFor="eyeshadow" onClick={handleFilterSelection('eyeshadow')}>Eyeshadow</label>
-                <input type="checkbox" name="concealer" value="concealer" checked={currentFilter === 'concealer'} onChange={handleFilterSelection('concealer')} />
-                <label htmlFor="concealer" onClick={handleFilterSelection('concealer')}>concealer</label>
-                <input type="checkbox" name="foundation" value="foundation" checked={currentFilter === 'foundation'} onChange={handleFilterSelection('foundation')} />
-                <label htmlFor="foundation" onClick={handleFilterSelection('foundation')}>foundation</label>
-                <input type="checkbox" name="lipstick" value="lipstick" checked={currentFilter === 'lipstick'} onChange={handleFilterSelection('lipstick')} />
-                <label htmlFor="lipstick" onClick={handleFilterSelection('lipstick')}>lipstick</label>
-                <input type="checkbox" name="blush" value="blush" checked={currentFilter === 'blush'} onChange={handleFilterSelection('blush')} />
-                <label htmlFor="blush" onClick={handleFilterSelection('blush')}>blush</label>
-              </div>
+              <FilterBar
+                opts={filterOptions}
+                handleFilterSelection={handleFilterSelection}
+                currentFilter={currentFilter}
+              />
               <Card product={products[currentProduct]} />
-              <div>
-                <Button text="Dislike" onClick={handleNextProduct('dislike')} />
-                <Button text="Like" onClick={handleNextProduct('like')} />
+              <div className={s.buttonWrapper}>
+                <Button text="dislike" onClick={handleNextProduct('dislike')} />
+                <Button text="like" onClick={handleNextProduct('like')} />
               </div>
             </>
         }

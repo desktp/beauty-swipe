@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Button = ({ text, onClick = () => {} }) => (
-  <button onClick={onClick}>{text}</button>
-);
+import s from './Button.module.css';
+
+const Button = ({ text, onClick = () => {} }) => <button onClick={onClick} className={`${s.button} ${s[text]}`} />;
 
 export default Button;
