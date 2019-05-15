@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/beauty-swipe/static/css/main.ada7b70d.chunk.css",
-    "main.js": "/beauty-swipe/static/js/main.027a1b1a.chunk.js",
-    "main.js.map": "/beauty-swipe/static/js/main.027a1b1a.chunk.js.map",
+    "main.css": "/beauty-swipe/static/css/main.95846d03.chunk.css",
+    "main.js": "/beauty-swipe/static/js/main.a9927073.chunk.js",
+    "main.js.map": "/beauty-swipe/static/js/main.a9927073.chunk.js.map",
     "runtime~main.js": "/beauty-swipe/static/js/runtime~main.8087db5a.js",
     "runtime~main.js.map": "/beauty-swipe/static/js/runtime~main.8087db5a.js.map",
-    "static/js/2.98b0d086.chunk.js": "/beauty-swipe/static/js/2.98b0d086.chunk.js",
-    "static/js/2.98b0d086.chunk.js.map": "/beauty-swipe/static/js/2.98b0d086.chunk.js.map",
+    "static/js/2.cbe6731e.chunk.js": "/beauty-swipe/static/js/2.cbe6731e.chunk.js",
+    "static/js/2.cbe6731e.chunk.js.map": "/beauty-swipe/static/js/2.cbe6731e.chunk.js.map",
     "index.html": "/beauty-swipe/index.html",
-    "precache-manifest.0ddb9a679e76cdc7c4c59d4face7d5c6.js": "/beauty-swipe/precache-manifest.0ddb9a679e76cdc7c4c59d4face7d5c6.js",
+    "precache-manifest.7a71c8410464e8746b8b2ce64b3b823f.js": "/beauty-swipe/precache-manifest.7a71c8410464e8746b8b2ce64b3b823f.js",
     "service-worker.js": "/beauty-swipe/service-worker.js",
-    "static/css/main.ada7b70d.chunk.css.map": "/beauty-swipe/static/css/main.ada7b70d.chunk.css.map"
+    "static/css/main.95846d03.chunk.css.map": "/beauty-swipe/static/css/main.95846d03.chunk.css.map"
   }
 }
