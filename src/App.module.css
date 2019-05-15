@@ -28,3 +28,35 @@
   display: flex;
   justify-content: space-between;
 }
+
+.likeCounter {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.likeWrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  background-image: url('https://desktp.github.io/beauty-swipe/img/thumbs-up.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-blend-mode: soft-light;
+  background-color: #71da78;
+  padding: 8px 25px;
+  padding-right: 50px;
+  background-position-x: 20px;
+  border-radius: 5px;
+}
+
+.dislike {
+  background-color: #f4c435;
+  transform: rotate(180deg);
+}
+
+.dislike span {
+  transform: rotate(180deg);
+}

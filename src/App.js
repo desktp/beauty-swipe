@@ -13,7 +13,7 @@ import { fetchProducts, rateProduct, setFilter } from './ducks';
 
 const filterOptions = ['eyeshadow', 'concealer', 'foundation', 'lipstick', 'blush'];
 
-function App({ fetchProducts, rateProduct, setFilter, products, page, loading }) {
+function App({ fetchProducts, rateProduct, setFilter, products, ratedProducts, page, loading }) {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [currentFilter, setCurrentFilter] = useState('');
 
@@ -56,6 +56,18 @@ function App({ fetchProducts, rateProduct, setFilter, products, page, loading })
                 handleFilterSelection={handleFilterSelection}
                 currentFilter={currentFilter}
               />
+              <div className={s.likeCounter}>
+                <div className={`${s.likeWrapper} ${s.dislike}`}>
+                  <span>
+                    {ratedProducts.dislike.length}
+                  </span>
+                </div>
+                <div className={s.likeWrapper}>
+                  <span>
+                    {ratedProducts.like.length}
+                  </span>
+                </div>
+              </div>
               <Card product={products[currentProduct]} />
               <div className={s.buttonWrapper}>
                 <Button text="dislike" onClick={handleNextProduct('dislike')} />
@@ -68,7 +80,7 @@ function App({ fetchProducts, rateProduct, setFilter, products, page, loading })
   );
 }
 
-const mapState = ({ loading, products, page }) => ({ loading, products, page });
+const mapState = ({ loading, products, ratedProducts, page }) => ({ loading, products, ratedProducts, page });
 
 const mapDispatch = { fetchProducts, rateProduct, setFilter };
 
